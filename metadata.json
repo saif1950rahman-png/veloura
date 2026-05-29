@@ -1,0 +1,6 @@
+{
+  "name": "Veloura Café",
+  "description": "A cinematic, ultra-luxury digital experience and reservation system mockup for the elite Veloura Café.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

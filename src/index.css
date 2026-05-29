@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300..900;1,300..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", "Playfair Display", serif;
+  --font-sans: "Helvetica Neue", Arial, "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-gold-50: #fafaf9;
+  --color-gold-100: #f5f5f4;
+  --color-gold-200: #e7e5e4;
+  --color-gold-300: #c4a484; /* brass */
+  --color-gold-400: #a78b71;
+  --color-gold-500: #8c7355;
+  --color-gold-600: #785a3c;
+  --color-gold-700: #5c432b;
+  --color-gold-800: #44321f;
+  --color-gold-900: #2b1f13;
+  
+  /* Absolute luxury metals */
+  --color-luxury-gold: #c4a484; /* brass */
+  --color-brass: #c4a484;
+  --color-luxury-bronze: #8c7355; /* deep brass bronze */
+  
+  --color-espresso-50: #fafaf9;
+  --color-espresso-100: #f5f5f4; /* stone-100 */
+  --color-espresso-200: #e7e5e4; /* stone-200 */
+  --color-espresso-300: #d6d3d1; /* stone-300 */
+  --color-espresso-400: #a8a29e; /* stone-400 */
+  --color-espresso-500: #78716c; /* stone-500 */
+  --color-espresso-600: #57534e; /* stone-600 */
+  --color-espresso-700: #44403c; /* stone-700 */
+  --color-espresso-800: #292524; /* stone-800 */
+  --color-espresso-900: #1c1917; /* stone-900 */
+  --color-espresso-950: #0c0a09; /* stone-950 (perfect charcoal dark black background) */
+
+  --color-walnut-50: #fafaf9;
+  --color-walnut-100: #f5f5f4;
+  --color-walnut-200: #e7e5e4;
+  --color-walnut-300: #d6d3d1;
+  --color-walnut-500: #78716c;
+  --color-walnut-700: #44403c;
+  --color-walnut-800: #292524;
+  --color-walnut-900: #1c1917;
+  --color-walnut-950: #0c0a09;
+}
+
+/* Base style resets and luxury custom styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-espresso-950);
+  color: var(--color-espresso-100);
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-espresso-800) var(--color-espresso-950);
+}
+
+/* Custom scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-espresso-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-espresso-800);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-luxury-gold);
+}
+
+/* Custom animation utils */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 10s ease-in-out infinite;
+}
+
+/* Glassmorphism glass card styling - Clean Minimalist edition */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-gold {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(196, 164, 132, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(196, 164, 132, 0.08);
+}
+
+/* Gold text clip gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5f5f4 0%, #c4a484 50%, #8c7355 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Elegant text reveal effect */
+.text-reveal-container {
+  overflow: hidden;
+}
+
+/* Custom horizontal line style */
+.luxury-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(196, 164, 132, 0.25) 50%, transparent 100%);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 12px rgba(196, 164, 132, 0.25);
+}
+
